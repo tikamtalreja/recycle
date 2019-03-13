@@ -17,13 +17,13 @@ import java.util.List;
 public class HrRecyclerViewAdapter extends RecyclerView.Adapter<HrRecyclerViewAdapter.MyViewHolder> {
     private Context context;
     private LayoutInflater layoutInflater;
-    private List<RecyclerViewData> recyclerViewDataList = new ArrayList<>();
+    private List<HrRecyclerViewData> recyclerViewDataList = new ArrayList<>();
 
     public  HrRecyclerViewAdapter(Context context){
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
     }
-    public void setRecyclerViewDataList(List<RecyclerViewData> recyclerViewDataList) {
+    public void setRecyclerViewDataList(List<HrRecyclerViewData> recyclerViewDataList) {
         this.recyclerViewDataList = recyclerViewDataList;
     }
     @NonNull
@@ -35,7 +35,7 @@ public class HrRecyclerViewAdapter extends RecyclerView.Adapter<HrRecyclerViewAd
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        final RecyclerViewData data = recyclerViewDataList.get(position);
+        final HrRecyclerViewData data = recyclerViewDataList.get(position);
         Glide.with(context).load(data.getHr_image()).apply(RequestOptions.circleCropTransform())
                 .into(holder.hrimage);
     }

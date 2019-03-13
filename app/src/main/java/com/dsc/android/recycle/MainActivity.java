@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private HrRecyclerViewAdapter HrrecyclerViewAdapter;
     private VrRecyclerViewAdapter vrRecyclerViewAdapter;
     private List<RecyclerViewData> mockDataList = new ArrayList<>();
+    private List<HrRecyclerViewData> mockDataList1 = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,15 +27,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpRecyclerView() {
         HrrecyclerViewAdapter = new HrRecyclerViewAdapter(this);
-        hrRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        hrRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         hrRecyclerView.setAdapter(HrrecyclerViewAdapter);
-        HrrecyclerViewAdapter.setRecyclerViewDataList(mockDataList);
+        HrrecyclerViewAdapter.setRecyclerViewDataList(mockDataList1);
         HrrecyclerViewAdapter.notifyDataSetChanged();
 
         //Vertical
         vrRecyclerViewAdapter = new VrRecyclerViewAdapter(this);
-        vrRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        vrRecyclerView.setAdapter(HrrecyclerViewAdapter);
+        vrRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        vrRecyclerView.setAdapter(vrRecyclerViewAdapter);
         vrRecyclerViewAdapter.setRecyclerViewDataList(mockDataList);
         vrRecyclerViewAdapter.notifyDataSetChanged();
 
@@ -44,21 +45,27 @@ public class MainActivity extends AppCompatActivity {
 
     private void createMockList(){
         RecyclerViewData data;
-        data = new RecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
-        mockDataList.add(data);
-            data = new RecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
-            mockDataList.add(data);
-            data = new RecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
-            mockDataList.add(data);
-            data = new RecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
-            mockDataList.add(data);
-            data = new RecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
-            mockDataList.add(data);
+        HrRecyclerViewData data1;
+        data1 = new HrRecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
+        mockDataList1.add(data1);
+        data1 = new HrRecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
+        mockDataList1.add(data1);
+        data1 = new HrRecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
+        mockDataList1.add(data1);
+        data1 = new HrRecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
+        mockDataList1.add(data1);
+        data1 = new HrRecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
+        mockDataList1.add(data1);
+        data1 = new HrRecyclerViewData("https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
+        mockDataList1.add(data1);
+
+
+
         data = new RecyclerViewData("tikam", "9691920858","https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
         mockDataList.add(data);
         data = new RecyclerViewData("vivek", "9074955179","https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
         mockDataList.add(data);
-        data = new RecyclerViewData("bijin", "8461857371","https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpgr");
+        data = new RecyclerViewData("bijin", "8461857371","https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
         mockDataList.add(data);
         data = new RecyclerViewData("rutik", "7223029222","https://cdn.pixabay.com/photo/2016/09/25/15/11/android-1693894__340.jpg");
         mockDataList.add(data);

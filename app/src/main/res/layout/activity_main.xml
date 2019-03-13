@@ -4,21 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".MainActivity" >
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/vr_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        tools:spanCount="5">
-
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hr_recyclerview"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical">
     </android.support.v7.widget.RecyclerView>
-
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/vr_recyclerview"
+        android:orientation="horizontal"
         android:id="@+id/hr_recyclerview">
-
     </android.support.v7.widget.RecyclerView>
 </RelativeLayout>

@@ -3,12 +3,10 @@ package com.dsc.android.recycle;
 public class RecyclerViewData {
     String name;
     String phone;
-    String hr_image;
+
     String vr_image;
 
-    public RecyclerViewData(String hr_image) {
-        this.hr_image = hr_image;
-    }
+
 
     public RecyclerViewData(String name, String phone, String vr_image) {
         this.name = name;
@@ -30,14 +28,6 @@ public class RecyclerViewData {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getHr_image() {
-        return hr_image;
-    }
-
-    public void setHr_image(String hr_image) {
-        this.hr_image = hr_image;
     }
 
     public String getVr_image() {
